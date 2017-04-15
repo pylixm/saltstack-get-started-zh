@@ -23,11 +23,10 @@
 
 4. 提取您下载的zip文件，然后打开一个命令提示符到提取的目录:
 ```bash
-# windows 
-cd %homepath%\Downloads\salt-vagrant-demo-master
-
-# mac 
-cd ~\Downloads\salt-vagrant-demo-master
+    # windows 
+    cd %homepath%\Downloads\salt-vagrant-demo-master
+    # mac 
+    cd ~\Downloads\salt-vagrant-demo-master
 ```
 
 5. 运行`vagrant`，启动演示环境:
@@ -219,5 +218,70 @@ Grains 是静态信息,SaltStack收集关于底层管理系统的信息。 SaltS
 
 ![](./media/vagrant-grains.png)
 
-## 
+## 创建 salt state
+
+远程执行能够很大程度上节省时间，但它有一些缺点。您执行的大多数任务是许多命令，测试和操作的组合，每个都有自己的细微差别和故障点。通常尝试将所有这些步骤组合到一个中央shell脚本中，但是这些脚本很快就会变得难以置信，并引入他们变得头痛。
+
+为了解决这个问题，SaltStack配置管理允许您创建一个称为 state 的可重用配置模板，该模板描述将系统组件或应用程序置入已知配置所需的所有内容。
+
+当你看到他们在运行中时，我们更容易理解，所以让我们编写一个试试。state 使用YAML进行描述，并且易于创建和读取。
+
+为了简化事情，我们的Vagrant文​​件将Salt主机上的`/srv/salt`目录映射到本地的`salt-vagrant-demo-master/saltstack/salt`目录。这意味着您可以使用本地文本编辑器并将文件保存到本地文件系统，Vagrant使它看起来像Salt主机上一样。
+
+使用任何纯文本编辑器，创建一个新的文本文件并添加以下内容：
+```yaml
+install_network_packages:
+  pkg.installed:
+    - pkgs:
+      - rsync
+      - lftp
+      - curl
+```
+
+这个 State 调用`pkg.installed` state 函数，并传递pkgs参数的三个包名称列表。将此示例另存为`salt-vagrant-demo-master/saltstack/salt/nettools.sls`：
+
+![](./media/vagrant-nettools.png)
+
+让我们来检验我们的 state 。我们将在下一节中了解一种更强大的应用state（称为highstate）的方法，但现在您可以使用state.apply命令直接从命令行应用state。
+
+```
+salt 'minion2' state.apply nettools
+#state.apply was added in 2015.5, so if you are using an earlier version call state.sls instead.
+```
+您可能已经猜到，您可以使用定位机制将此状态应用于任何一组Salt minions。现在只要选一个或全部你的Salt minion。如果一切顺利，你会得到类似的输出：
+
+![](./media/vagrant-state-apply.png)
+
+如果这还不够酷，请将state再次应用到相同的Salt minion：，并查看输出：
+
+![](./media/vagrant-state-apply2.png)
+
+
+
+
+
+### 术语 
+
+**Formula：** 配置应用程序或系统组件的Salt state和Salt pillar文件的集合。大多数Formula由分布在多个Salt state文件中的几个Salt states组成。
+
+**State:** 配置系统特定部分的可重用声明。每个Salt state 都使用 state declaration 来定义。
+
+**State Declaration:** 列出构成state的 state functions 调用和参数的 state 文件的顶级部分。每个state declaration 都以唯一的ID开始。
+
+**State Functions:** 您调用以在系统上执行配置任务的命令。
+
+**State File:** 包含一个或多个state declaration 的SLS扩展名的文件。
+
+**Pillar File:** 具有SLS扩展名的文件，用于定义系统的自定义变量和数据。
+
+#### YAML 
+
+Salt使用一种称为YAML的简单语言来描述配置。这是你需要知道的：
+- YAML使用固定的缩进方案来表示数据层之间的关系。 Salt要求每个级别的缩进由两个空格组成。不要使用tab。
+- 破折号表示列表中的项目。
+- 键值对由`key：value`表示
+
+#### 执行顺序
+
+状态文件中的命令从上到下执行。在此示例中，在更新配置文件之前安装软件包，因为该部分首先出现在文件中。SaltStack还提供了一个强大的必需系统，可让您明确确定顺序，我们将在以后的教程中介绍。
 
