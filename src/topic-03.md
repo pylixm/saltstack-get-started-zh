@@ -1,4 +1,4 @@
-# SaltStack 速度
+# SaltStack 的速度
 
 在SaltStack中，速度不是副产品，而是设计目标。SaltStack被创建为一个非常快速，轻便的通信总线，为远程执行引擎提供了基础。SaltStack现在提供编排，配置管理，事件反应器，云配置等，全部围绕SaltStack高速通信总线构建。
 
