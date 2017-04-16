@@ -258,8 +258,6 @@ salt 'minion2' state.apply nettools
 
 
 
-
-
 ### 术语 
 
 **Formula：** 配置应用程序或系统组件的Salt state和Salt pillar文件的集合。大多数Formula由分布在多个Salt state文件中的几个Salt states组成。
