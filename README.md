@@ -11,5 +11,7 @@ saltstack 入门文档翻译
 
 Blog: [www.pylixm.cc](http://www.pylixm.cc)
 
+GitHub: [https://github.com/pylixm](https://github.com/pylixm)
+
 
 
