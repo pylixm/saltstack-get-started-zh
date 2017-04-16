@@ -8,6 +8,7 @@ saltstack 入门文档翻译
 
 
 译者：pylixm
+
 Blog: [www.pylixm.cc](http://www.pylixm.cc)
 
 
