@@ -1,7 +1,7 @@
 # Summary
 * [前言](README.md)
 * [简介](./src/introduction.md)
-* [话题0: 理解Saltstack]
+* [话题0: 理解Saltstack](./src/topic-00.md)
 * [话题1：SaltStack 的基础](./src/topic-01.md)
     * [1.1 实例测试环境](./src/topic-01.md#实例测试环境)
     * [1.2 安装SaltStack](./src/topic-01.md#安装SaltStack)
