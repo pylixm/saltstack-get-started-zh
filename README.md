@@ -6,6 +6,7 @@ saltstack 入门文档翻译
 
 若存在疑惑之处，可到github [地址](https://github.com/pylixm/saltstack-get-started-zh)提issue, 或直接查阅原文，官方文档地址：[https://docs.saltstack.com/en/getstarted/](https://docs.saltstack.com/en/getstarted/)
 
+Gitbook地址：[http://salt.pylixm.cc](http://salt.pylixm.cc)
 
 译者：pylixm
 
