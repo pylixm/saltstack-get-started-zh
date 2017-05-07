@@ -17,7 +17,14 @@
     * [1.4 TARGETING](./src/topic-01.md#TARGETING)
     * [1.5 创建 salt state](./src/topic-01.md#创建-salt-state)
     * [1.6 APPLY AND TARGET STATES](./src/topic-01.md#APPLY-AND-TARGET-STATES)
-* [话题2：配置管理入门指南]
+* [话题2：配置管理入门指南](./src/topic-02.md)
+    * [2.1 简介](./src/topic-02.md#简介)
+    * [2.2 函数](./src/topic-02.md#函数)
+    * [2.3 Pillar](./src/topic-02.md#pillar)
+    * [2.4 include](./src/topic-02.md#include)
+    * [2.5 执行顺序和依赖关系](./src/topic-02.md#执行顺序和依赖关系)
+    * [2.6 jinja](./src/topic-02.md#jinja)
+    * [2.7 文件管理](./src/topic-02.md#文件管理)
 * [话题3：底层事件驱动器]
 * [话题4：SaltStack 组件](./src/topic-04.md)
 * [话题5：SaltStack 的灵活性](./src/topic-05.md)
