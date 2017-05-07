@@ -36,7 +36,7 @@ vagrant up
 ```
 在`vagrant up `（〜10分钟）之后，您将返回命令提示符，您随时可以继续执行本指南。
 
-## 安装SaltStack
+## 安装 SaltStack
 
 原文：[https://docs.saltstack.com/en/getstarted/fundamentals/install.html](https://docs.saltstack.com/en/getstarted/fundamentals/install.html)
 

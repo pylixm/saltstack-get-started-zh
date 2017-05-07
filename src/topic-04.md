@@ -61,7 +61,7 @@
 
 ## Reactor
 
-当您的SaltStack环境发生事件时触发反应。(译者注：类似事件总线)
+当您的SaltStack环境发生事件时触发反应。(译者注：类似事件总线上的监听函数，特定时间出发)
 
 <img src="media/reactor.png" width = "350" height = "300" alt="图片名称" align=center />
 
