@@ -196,7 +196,7 @@ salt '*' test.rand_sleep 120
 
 模块和函数在Python部分再次讨论，所以我们现在继续讨论配置管理子系统Salt状态。
 
-## State 系统
+## 状态系统
 
 本教程将介绍状态系统的工作原理。有关教程，请参阅[配置管理](https://docs.saltstack.com/en/getstarted/config/)。
 
@@ -213,7 +213,7 @@ State 系统和远程执行系统之间的主要区别是State系统中的流量
 
 这是使用实际的例子最好的说明，我们将留给[配置管理指南](https://docs.saltstack.com/en/getstarted/config/)。
 
-## Runner 
+## 执行系统-Runner 
 
 Runner 子系统提供在Salt主机上执行的Salt模块（请记住，远程执行和state模块在每个目标配件上同时独立运行，而不是在Salt主机上运行）。
 
