@@ -1,18 +1,13 @@
-# saltstack-get-started-zh
 
-saltstack 入门文档翻译
+# saltstack 入门文档翻译
 
 本教程为本人学习记录翻译，英文水平有限，大多数为直译，文中存在许多不妥之处，还请谅解。
 
-若存在疑惑之处，可到github [地址](https://github.com/pylixm/saltstack-get-started-zh)提issue, 或直接查阅原文，官方文档地址：[https://docs.saltstack.com/en/getstarted/](https://docs.saltstack.com/en/getstarted/)
+若存在疑惑之处，可到github 地址提issue, 或直接查阅原文，官方文档地址：https://docs.saltstack.com/en/getstarted/
 
-Gitbook地址：[http://salt.pylixm.cc](http://salt.pylixm.cc)
-
-译者：pylixm
-
-Blog: [www.pylixm.cc](http://www.pylixm.cc)
-
-GitHub: [https://github.com/pylixm](https://github.com/pylixm)
-
-
-
+- 在线预览地址：http://pylixm.top/saltstack/
+- 译者：pylixm
+- Blog: 
+    - http://www.pylixm.cc
+    - http://www.pylixm.top
+- GitHub: https://github.com/pylixm
