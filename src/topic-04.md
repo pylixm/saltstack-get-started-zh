@@ -21,7 +21,7 @@
 - 一次性命令和脚本的运行。
 - 部署关键的更新。
 
-<img src="./saltstack/./src/./media/execution-modules.png" width = "200" height = "200" alt="图片名称" align=center />
+<img src="/saltstack/./src/./media/execution-modules.png" width = "200" height = "200" alt="图片名称" align=center />
 
 ## Formulas (States)
 
