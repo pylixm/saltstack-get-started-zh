@@ -6,13 +6,13 @@
 
 中央管理系统。该系统用于向托管系统上运行的Salt minion发送命令和配置。
 
-<img src="media/salt-master.png" width = "150" height = "200" alt="图片名称" align=center />
+<img src="/saltstack/./src/./media/salt-master.png" width = "150" height = "200" alt="图片名称" align=center />
 
 ## Salt Minions
 
 管理系统。该系统运行Salt Minion，它从Salt主机接收命令和配置。
 
-<img src="media/salt-minions.png" width = "150" height = "200" alt="图片名称" align=center />
+<img src="/saltstack/./src/./media/salt-minions.png" width = "150" height = "200" alt="图片名称" align=center />
 
 ## 执行 module 
 
@@ -21,7 +21,7 @@
 - 一次性命令和脚本的运行。
 - 部署关键的更新。
 
-<img src="./media/execution-modules.png" width = "200" height = "200" alt="图片名称" align=center />
+<img src="./saltstack/./src/./media/execution-modules.png" width = "200" height = "200" alt="图片名称" align=center />
 
 ## Formulas (States)
 
